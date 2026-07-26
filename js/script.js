@@ -36,20 +36,6 @@ document.documentElement.classList.add('js');
     });
   }
 
-  /* ---- work mega dropdown (keyboard / touch) ---- */
-  var trigger = document.getElementById('workTrigger');
-  var dropdown = document.getElementById('workDropdown');
-  if (trigger && dropdown) {
-    dropdown.hidden = false; // CSS handles visibility via hover/focus
-    var parent = document.getElementById('workNav');
-    trigger.addEventListener('click', function (e) {
-      if (window.innerWidth > 860) return;
-      e.preventDefault();
-    });
-    parent.addEventListener('focusin', function () { trigger.setAttribute('aria-expanded', 'true'); });
-    parent.addEventListener('focusout', function () { trigger.setAttribute('aria-expanded', 'false'); });
-  }
-
   /* ---- work filters ---- */
   var filters = document.getElementById('workFilters');
   var grid = document.getElementById('workGrid');
