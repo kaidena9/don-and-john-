@@ -460,6 +460,25 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .work-card__meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--accent-soft); }
 
 /* ============================================================
+   OUR STORY
+   ============================================================ */
+.story { padding: clamp(64px, 9vh, 104px) var(--gutter); background: var(--paper); }
+.story__inner {
+  max-width: var(--max); margin: 0 auto;
+  display: grid; grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+}
+.story__lead { font-size: clamp(17px, 1.5vw, 20px); font-weight: 600; line-height: 1.5; color: var(--text); margin-bottom: 14px; }
+.story__body p:not(.story__lead) { font-size: 15px; line-height: 1.66; color: var(--text-dim); margin-bottom: 12px; max-width: 62ch; }
+.story__sig {
+  display: block; margin-top: 12px;
+  font-family: var(--ff-display); font-style: italic;
+  font-size: 19px; font-weight: 600;
+  color: var(--accent-dark);
+}
+
+/* ============================================================
    TRUST (testimonial + points)
    ============================================================ */
 .trust { padding: 0 var(--gutter); }
@@ -755,6 +774,7 @@ fieldset.estimate-form__row legend { margin-bottom: 8px; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1024px) {
+  .story__inner { grid-template-columns: 1fr; gap: 20px; }
   .services__grid { grid-template-columns: repeat(2, 1fr); }
   .work__grid { grid-template-columns: repeat(2, 1fr); }
   .trust__points { grid-template-columns: repeat(2, 1fr); }
