@@ -263,9 +263,9 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   content: "";
   position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(92deg,
-    rgba(246, 248, 250, 0.88) 0%,
-    rgba(246, 248, 250, 0.55) 38%,
-    rgba(246, 248, 250, 0) 66%);
+    rgba(178, 199, 242, 0.78) 0%,
+    rgba(192, 211, 246, 0.46) 38%,
+    rgba(205, 221, 248, 0) 66%);
 }
 .hero__inner {
   position: relative; z-index: 2;
@@ -591,7 +591,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   .hero__copy { max-width: none; }
   .hero__bg { object-position: 24% center; }
   .hero::after {
-    background: linear-gradient(180deg, rgba(246,248,250,.9) 0%, rgba(246,248,250,.62) 55%, rgba(246,248,250,.25) 100%);
+    background: linear-gradient(180deg, rgba(178,199,242,.8) 0%, rgba(192,211,246,.52) 55%, rgba(205,221,248,.22) 100%);
   }
   .mission__inner { grid-template-columns: 1fr; }
   .mission__media { order: -1; max-height: 420px; }
