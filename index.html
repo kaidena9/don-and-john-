@@ -27,7 +27,12 @@
   "email": "donandjohnglass@gmail.com",
   "url": "https://kaidena9.github.io/don-and-john-/",
   "areaServed": "Chicago, IL and surrounding suburbs",
-  "priceRange": "$$"
+  "priceRange": "$$",
+  "openingHours": ["Mo-Fr 07:00-18:00", "Sa 08:00-14:00"],
+  "sameAs": [
+    "https://g.page/r/CdWfvbmN3lbPEBM",
+    "https://www.yelp.com/biz/don-and-john-high-class-glass-elmwood-park"
+  ]
 }
 </script>
 </head>
@@ -94,33 +99,40 @@
           <span class="service-card__ic" aria-hidden="true"><span class="material-symbols-outlined">window</span></span>
           <h3>Window Cleaning</h3>
           <p>Streak-free glass, inside and out, cleaned by hand.</p>
+          <span class="service-card__price">Single story from $149</span>
         </div>
         <div class="service-card">
           <span class="service-card__ic" aria-hidden="true"><span class="material-symbols-outlined">home_repair_service</span></span>
           <h3>Gutter Cleaning</h3>
           <p>Every leaf out, every downspout flushed, no mess left behind.</p>
+          <span class="service-card__price">Starting at $149</span>
         </div>
         <div class="service-card">
           <span class="service-card__ic" aria-hidden="true"><span class="material-symbols-outlined">water_drop</span></span>
           <h3>House Washing</h3>
           <p>Soft-wash that lifts dirt and mildew without hurting your siding.</p>
+          <span class="service-card__price">From $249</span>
         </div>
         <div class="service-card">
           <span class="service-card__ic" aria-hidden="true"><span class="material-symbols-outlined">bolt</span></span>
           <h3>Power Washing</h3>
           <p>Patios, decks, fences, and walkways stripped of years of grime.</p>
+          <span class="service-card__price">Custom quote</span>
         </div>
         <div class="service-card">
           <span class="service-card__ic" aria-hidden="true"><span class="material-symbols-outlined">directions_car</span></span>
           <h3>Driveway Cleaning</h3>
           <p>Oil stains, grime, and tire marks lifted from the concrete.</p>
+          <span class="service-card__price">Starting at $199</span>
         </div>
         <div class="service-card">
           <span class="service-card__ic" aria-hidden="true"><span class="material-symbols-outlined">storefront</span></span>
           <h3>Commercial</h3>
           <p>Storefronts and offices kept clean, on your schedule.</p>
+          <span class="service-card__price">Custom quote</span>
         </div>
       </div>
+      <p class="services__note">Typical starting prices — every home is different, so your free estimate is exact. No hidden fees.</p>
     </div>
   </section>
 
@@ -253,6 +265,9 @@
             <span class="material-symbols-outlined" aria-hidden="true">verified</span>
             Real reviews from Don &amp; John customers
           </span>
+          <a class="trust__source" href="https://g.page/r/CdWfvbmN3lbPEBM" target="_blank" rel="noopener">
+            Review us on Google <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+          </a>
           <a class="trust__source" href="https://www.yelp.com/biz/don-and-john-high-class-glass-elmwood-park" target="_blank" rel="noopener">
             Find us on Yelp <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
           </a>
@@ -295,6 +310,7 @@
           <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Same-day response</li>
           <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>No pressure, no hidden fees</li>
           <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Chicago &amp; surrounding suburbs</li>
+          <li><span class="material-symbols-outlined" aria-hidden="true">schedule</span>Mon–Fri 7am–6pm · Sat 8am–2pm</li>
         </ul>
         <a href="tel:+17088552336" class="link-arrow estimate__call">Or call (708) 855-2336 <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
       </div>
@@ -316,6 +332,10 @@
           <input type="email" id="email" name="email" required autocomplete="email">
         </div>
         <div class="estimate-form__row estimate-form__row--full">
+          <label for="address">Property Address</label>
+          <input type="text" id="address" name="address" required autocomplete="street-address">
+        </div>
+        <div class="estimate-form__row estimate-form__row--full">
           <label for="service">Service Needed</label>
           <select id="service" name="service">
             <option>Window Cleaning</option>
@@ -324,6 +344,8 @@
             <option>Power Washing</option>
             <option>Driveway Cleaning</option>
             <option>Commercial Services</option>
+            <option>Multiple Services</option>
+            <option>Not Sure</option>
           </select>
         </div>
         <div class="estimate-form__row estimate-form__row--full">
@@ -376,7 +398,7 @@
     <div class="footer__top">
       <div>
         <span class="footer__brand">Don &amp; John<i>High Class Glass</i></span>
-        <p class="footer__pitch">Local, fully insured exterior cleaning for Chicago and the suburbs.</p>
+        <p class="footer__pitch">What started as two friends with a ladder and a squeegee has grown into one of Chicago's most trusted exterior cleaning companies. No gimmicks, no hidden fees — just honest work done right.</p>
         <a href="#estimate" class="btn btn--white footer__cta">Get a Quote</a>
       </div>
       <div class="footer__cols">
@@ -394,7 +416,10 @@
           <p>
             <a href="tel:+17088552336">(708) 855-2336</a><br>
             <a href="mailto:donandjohnglass@gmail.com">donandjohnglass@gmail.com</a><br>
-            Chicago, IL &amp; Surrounding Suburbs
+            Chicago, IL &amp; Surrounding Suburbs<br>
+            Mon–Fri 7am–6pm · Sat 8am–2pm<br>
+            <a href="https://g.page/r/CdWfvbmN3lbPEBM" target="_blank" rel="noopener">Google Business Profile</a><br>
+            <a href="https://www.yelp.com/biz/don-and-john-high-class-glass-elmwood-park" target="_blank" rel="noopener">Yelp</a>
           </p>
         </div>
       </div>
