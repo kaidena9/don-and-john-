@@ -16,6 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block">
+<link rel="canonical" href="https://kaidena9.github.io/don-and-john-/">
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
 {
@@ -47,9 +48,9 @@
     <a href="#main" class="nav__brand"><b>Don &amp; John</b><i>High Class Glass</i></a>
 
     <nav class="nav__links" aria-label="Primary" id="navLinks">
-      <a href="#services">Services</a>
+      <a href="services.html">Services</a>
       <a href="#gallery">Work</a>
-      <a href="#reviews">Reviews</a>
+      <a href="reviews.html">Reviews</a>
       <a href="#faq">FAQ</a>
       <a href="#estimate">Contact</a>
     </nav>
@@ -93,46 +94,41 @@
           <span class="eyebrow eyebrow--light">What we clean</span>
           <h2 class="section-title section-title--light">Every service we offer</h2>
         </div>
-        <p class="services__lede">One crew, the same careful standard on every job. Residential and commercial.</p>
+        <div><p class="services__lede">One crew, the same careful standard on every job. Residential and commercial.</p>
+        <a href="services.html" class="link-arrow link-arrow--light" style="margin-top:14px">Full services &amp; pricing <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></div>
       </header>
       <div class="services__grid" data-reveal-stagger>
-        <div class="service-card">
+        <a class="service-card" href="services.html#window-cleaning">
           <span class="service-card__ic" aria-hidden="true"><span class="material-symbols-outlined">window</span></span>
           <h3>Window Cleaning</h3>
           <p>Streak-free glass, inside and out, cleaned by hand.</p>
           <span class="service-card__price">1-story from $149 · 2-story from $249</span>
-        </div>
-        <div class="service-card">
+        </a><a class="service-card" href="services.html#gutter-cleaning">
           <span class="service-card__ic" aria-hidden="true"><span class="material-symbols-outlined">home_repair_service</span></span>
           <h3>Gutter Cleaning</h3>
           <p>Every leaf out, every downspout flushed, no mess left behind.</p>
           <span class="service-card__price">From $149 · up to 200 ft</span>
-        </div>
-        <div class="service-card">
+        </a><a class="service-card" href="services.html#house-washing">
           <span class="service-card__ic" aria-hidden="true"><span class="material-symbols-outlined">water_drop</span></span>
           <h3>House Washing</h3>
           <p>Soft-wash that lifts dirt and mildew without hurting your siding.</p>
           <span class="service-card__price">From $249</span>
-        </div>
-        <div class="service-card">
+        </a><a class="service-card" href="services.html#power-washing">
           <span class="service-card__ic" aria-hidden="true"><span class="material-symbols-outlined">bolt</span></span>
           <h3>Power Washing</h3>
           <p>Patios, decks, fences, and walkways stripped of years of grime.</p>
           <span class="service-card__price">Custom quote</span>
-        </div>
-        <div class="service-card">
+        </a><a class="service-card" href="services.html#driveway-cleaning">
           <span class="service-card__ic" aria-hidden="true"><span class="material-symbols-outlined">directions_car</span></span>
           <h3>Driveway Cleaning</h3>
           <p>Oil stains, grime, and tire marks lifted from the concrete.</p>
           <span class="service-card__price">Starting at $199</span>
-        </div>
-        <div class="service-card">
+        </a><a class="service-card" href="services.html#commercial">
           <span class="service-card__ic" aria-hidden="true"><span class="material-symbols-outlined">storefront</span></span>
           <h3>Commercial</h3>
           <p>Storefronts and offices kept clean, on your schedule.</p>
           <span class="service-card__price">Custom quote</span>
-        </div>
-      </div>
+        </a></div>
       <p class="services__note">Typical starting prices — every home is different, so your free estimate is exact. No hidden fees.</p>
       <div class="services__seasonal" data-reveal>
         <span class="material-symbols-outlined" aria-hidden="true">ac_unit</span>
@@ -290,6 +286,7 @@
             <span class="material-symbols-outlined" aria-hidden="true">verified</span>
             Real reviews from Don &amp; John customers
           </span>
+          <a class="trust__source" href="reviews.html">Read all reviews <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
           <a class="trust__source" href="https://g.page/r/CdWfvbmN3lbPEBM" target="_blank" rel="noopener">
             Review us on Google <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
           </a>
@@ -355,6 +352,7 @@
       </div>
 
       <form class="estimate-form" id="estimate-form" action="https://formsubmit.co/donandjohnglass@gmail.com" method="POST" data-reveal>
+        <input type="hidden" name="_next" value="https://kaidena9.github.io/don-and-john-/thanks.html">
         <input type="hidden" name="_subject" value="New estimate request from the website">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
@@ -451,7 +449,7 @@
         <div>
           <span class="footer__label">Explore</span>
           <p>
-            <a href="#services">Services</a><br>
+            <a href="services.html">Services</a><br>
             <a href="#gallery">Recent Work</a><br>
             <a href="#about">Our Story</a><br>
             <a href="#faq">FAQ</a><br>

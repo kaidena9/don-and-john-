@@ -51,6 +51,9 @@ document.documentElement.classList.add('js');
 
   /* ---- reveal on scroll ---- */
   var revealEls = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
+  var revealAll = function () {
+    revealEls.forEach(function (el) { el.classList.add('is-in'); });
+  };
   if ('IntersectionObserver' in window && revealEls.length) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -59,10 +62,12 @@ document.documentElement.classList.add('js');
           io.unobserve(entry.target);
         }
       });
-    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
+    }, { rootMargin: '200px 0px 0px 0px', threshold: 0 });
     revealEls.forEach(function (el) { io.observe(el); });
+    // Safety net: content must never stay invisible, whatever the observer does.
+    setTimeout(revealAll, 2500);
   } else {
-    revealEls.forEach(function (el) { el.classList.add('is-in'); });
+    revealAll();
   }
 
   /* ---- review slider ---- */
