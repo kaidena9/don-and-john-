@@ -245,7 +245,8 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
    ============================================================ */
 .hero {
   position: relative;
-  min-height: 92vh;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   overflow: hidden;
