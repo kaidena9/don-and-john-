@@ -99,9 +99,13 @@ document.documentElement.classList.add('js');
   /* ---- estimate form ---- */
   var form = document.getElementById('estimate-form');
   var formNote = document.getElementById('form-note');
-  if (form && formNote) {
+  if (form) {
     form.addEventListener('submit', function () {
-      formNote.textContent = 'Sending your request…';
+      // Reply-to the customer, so Don & John can answer straight from the email.
+      var email = form.querySelector('#email');
+      var replyto = form.querySelector('input[name="_replyto"]');
+      if (email && replyto) replyto.value = email.value;
+      if (formNote) formNote.textContent = 'Sending your request…';
     });
   }
 })();
