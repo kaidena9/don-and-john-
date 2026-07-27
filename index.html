@@ -22,11 +22,11 @@
     <a href="#main" class="nav__brand"><b>Don &amp; John</b><i>Exterior Cleaning</i></a>
 
     <nav class="nav__links" aria-label="Primary" id="navLinks">
-      <a href="#gallery">Work</a>
       <a href="#services">Services</a>
-      <a href="#about">About</a>
+      <a href="#gallery">Work</a>
+      <a href="#reviews">Reviews</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+      <a href="#estimate">Contact</a>
     </nav>
 
     <div class="nav__actions">
@@ -60,18 +60,46 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about" id="about" data-reveal>
-    <div class="about__inner">
-      <div class="about__tag"><span class="eyebrow">01 — About</span></div>
-      <div>
-        <p class="about__statement">Don &amp; John keeps Chicago homes looking their best, and <b>treats every property like it's our own.</b></p>
-        <div class="about__body" data-reveal-stagger>
-          <p>We're a local, fully insured exterior cleaning crew serving Chicago and the surrounding suburbs — windows, gutters, siding, and driveways, done by hand.</p>
-          <p>We show up on time, quote fair, upfront pricing before we start, and back every job with a 100% satisfaction guarantee.</p>
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="services__inner">
+      <header class="services__head" data-reveal>
+        <div>
+          <span class="eyebrow eyebrow--light">What we clean</span>
+          <h2 class="section-title section-title--light">Every service we offer</h2>
         </div>
-        <div class="about__cta">
-          <a href="#gallery" class="link-arrow">See our work <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+        <p class="services__lede">One crew, the same careful standard on every job. Residential and commercial.</p>
+      </header>
+      <div class="services__grid" data-reveal-stagger>
+        <div class="service-card">
+          <span class="service-card__ic" aria-hidden="true"><span class="material-symbols-outlined">window</span></span>
+          <h3>Window Cleaning</h3>
+          <p>Streak-free glass, inside and out, cleaned by hand.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-card__ic" aria-hidden="true"><span class="material-symbols-outlined">home_repair_service</span></span>
+          <h3>Gutter Cleaning</h3>
+          <p>Every leaf out, every downspout flushed, no mess left behind.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-card__ic" aria-hidden="true"><span class="material-symbols-outlined">water_drop</span></span>
+          <h3>House Washing</h3>
+          <p>Soft-wash that lifts dirt and mildew without hurting your siding.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-card__ic" aria-hidden="true"><span class="material-symbols-outlined">bolt</span></span>
+          <h3>Power Washing</h3>
+          <p>Patios, decks, fences, and walkways brought back to life.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-card__ic" aria-hidden="true"><span class="material-symbols-outlined">directions_car</span></span>
+          <h3>Driveway Cleaning</h3>
+          <p>Oil stains, grime, and tire marks lifted from the concrete.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-card__ic" aria-hidden="true"><span class="material-symbols-outlined">storefront</span></span>
+          <h3>Commercial</h3>
+          <p>Storefronts and offices kept clean, on your schedule.</p>
         </div>
       </div>
     </div>
@@ -81,43 +109,36 @@
   <section class="work" id="gallery">
     <div class="work__inner">
       <header class="work__head" data-reveal>
-        <div class="work__head-l">
-          <span class="eyebrow">02 — Featured Work</span>
-          <h2 class="section-title">Spotless results,<br>job after job.</h2>
+        <div>
+          <span class="eyebrow">Recent work</span>
+          <h2 class="section-title">Real jobs around Chicago</h2>
         </div>
-        <p class="lede">A look at recent window, gutter, and exterior cleaning work around Chicago and the surrounding suburbs.</p>
+        <a href="#estimate" class="link-arrow">Get yours done <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
       </header>
 
-      <div class="work__filters" id="workFilters" data-reveal>
-        <button class="work__filter is-active" data-filter="all">All Work</button>
-        <button class="work__filter" data-filter="windows">Windows</button>
-        <button class="work__filter" data-filter="power">Power Washing</button>
-        <button class="work__filter" data-filter="results">Results</button>
-      </div>
-
-      <div class="work__grid" id="workGrid" data-reveal-stagger>
-        <article class="work-card" data-cat="windows">
-          <img src="images/gallery-windows.jpg" alt="House with a water-fed pole cleaning an upper window">
+      <div class="work__grid" data-reveal-stagger>
+        <article class="work-card">
+          <img src="images/gallery-windows.jpg" alt="Water-fed pole cleaning an upper window of a Chicago home">
           <div class="work-card__scrim"></div>
-          <span class="work-card__tag">Window</span>
+          <span class="work-card__tag">Windows</span>
           <div class="work-card__body">
             <h3 class="work-card__title">Crystal Clear Windows</h3>
             <p class="work-card__meta">Residential <span class="dot"></span> Hand-cleaned</p>
           </div>
         </article>
 
-        <article class="work-card" data-cat="power">
-          <img src="images/gallery-gutters.jpg" alt="Don & John crew member power washing a home's siding">
+        <article class="work-card">
+          <img src="images/gallery-gutters.jpg" alt="Crew member soft-washing a home's siding">
           <div class="work-card__scrim"></div>
-          <span class="work-card__tag">Power Wash</span>
+          <span class="work-card__tag">Soft Wash</span>
           <div class="work-card__body">
-            <h3 class="work-card__title">Siding Power Wash</h3>
+            <h3 class="work-card__title">Siding Soft Wash</h3>
             <p class="work-card__meta">Residential <span class="dot"></span> Soft-wash</p>
           </div>
         </article>
 
-        <article class="work-card" data-cat="power">
-          <img src="images/gallery-siding-powerwash.jpg" alt="Clean white vinyl siding viewed from the roofline">
+        <article class="work-card">
+          <img src="images/gallery-siding-powerwash.jpg" alt="Clean white vinyl siding after a power wash">
           <div class="work-card__scrim"></div>
           <span class="work-card__tag">Power Wash</span>
           <div class="work-card__body">
@@ -126,38 +147,28 @@
           </div>
         </article>
 
-        <article class="work-card" data-cat="results">
-          <img src="images/gallery-driveway.jpg" alt="Roof before and after a professional cleaning">
+        <article class="work-card">
+          <img src="images/gallery-driveway.jpg" alt="Roof shown half-cleaned, before and after">
           <div class="work-card__scrim"></div>
-          <span class="work-card__tag">Results</span>
+          <span class="work-card__tag">Before &amp; After</span>
           <div class="work-card__body">
-            <h3 class="work-card__title">Before &amp; After</h3>
-            <p class="work-card__meta">Roof <span class="dot"></span> Restored</p>
+            <h3 class="work-card__title">Roof Restored</h3>
+            <p class="work-card__meta">Roof <span class="dot"></span> Before &amp; after</p>
           </div>
         </article>
 
-        <article class="work-card" data-cat="results">
-          <img src="images/gallery-garage-beforeafter.jpg" alt="Garage door showing a clean and unwashed half side by side">
+        <article class="work-card">
+          <img src="images/gallery-garage-beforeafter.jpg" alt="Garage door with a cleaned half next to an unwashed half">
           <div class="work-card__scrim"></div>
-          <span class="work-card__tag">Results</span>
+          <span class="work-card__tag">Before &amp; After</span>
           <div class="work-card__body">
             <h3 class="work-card__title">Garage Door Clean</h3>
             <p class="work-card__meta">Residential <span class="dot"></span> Before &amp; after</p>
           </div>
         </article>
 
-        <article class="work-card" data-cat="windows">
-          <img src="images/gallery-housewash.jpg" alt="Spotless, streak-free window after cleaning">
-          <div class="work-card__scrim"></div>
-          <span class="work-card__tag">Window</span>
-          <div class="work-card__body">
-            <h3 class="work-card__title">Streak-Free Finish</h3>
-            <p class="work-card__meta">Residential <span class="dot"></span> Detail work</p>
-          </div>
-        </article>
-
-        <article class="work-card" data-cat="power">
-          <img src="images/gallery-stonewall.jpg" alt="Stone wall and walkway along a brick home's exterior">
+        <article class="work-card">
+          <img src="images/gallery-stonewall.jpg" alt="Stone wall and walkway cleaned along a brick home">
           <div class="work-card__scrim"></div>
           <span class="work-card__tag">Power Wash</span>
           <div class="work-card__body">
@@ -166,9 +177,46 @@
           </div>
         </article>
       </div>
+    </div>
+  </section>
 
-      <div class="work__foot" data-reveal>
-        <a href="#estimate" class="link-arrow">Get a free estimate <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+  <!-- TRUST / REVIEWS -->
+  <section class="trust" id="reviews" data-reveal>
+    <div class="trust__inner">
+      <div class="trust__bg"><img src="images/band-driveway.jpg" alt="" aria-hidden="true"></div>
+      <div class="trust__content">
+        <div class="trust__stars" aria-label="5 out of 5 stars">
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+        </div>
+        <p class="trust__quote">"Had them clean our gutters and wash the siding. House looks brand new. These guys work hard and really care about quality."</p>
+        <span class="trust__by"><b>Mike R.</b> Gutter cleaning &amp; house washing · Elmwood Park, IL</span>
+
+        <div class="trust__points" data-reveal-stagger>
+          <div class="trust__point">
+            <span class="material-symbols-outlined" aria-hidden="true">verified_user</span>
+            <b>Fully Insured</b>
+            <span>Your property is covered on every job.</span>
+          </div>
+          <div class="trust__point">
+            <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+            <b>On Time</b>
+            <span>We show up when we say we will.</span>
+          </div>
+          <div class="trust__point">
+            <span class="material-symbols-outlined" aria-hidden="true">request_quote</span>
+            <b>Upfront Pricing</b>
+            <span>You know the price before we start.</span>
+          </div>
+          <div class="trust__point">
+            <span class="material-symbols-outlined" aria-hidden="true">thumb_up</span>
+            <b>Satisfaction Guaranteed</b>
+            <span>Not happy? We make it right.</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -177,14 +225,15 @@
   <section class="estimate" id="estimate" data-reveal>
     <div class="estimate__inner">
       <div class="estimate__copy">
-        <span class="eyebrow">Get a Free Estimate</span>
-        <h2 class="section-title">Let's get started.</h2>
-        <p class="lede">Tell us a bit about your home and what you need cleaned. We'll get back to you with a fair, upfront quote — no obligation.</p>
+        <span class="eyebrow">Free estimate</span>
+        <h2 class="section-title">Tell us what needs cleaning</h2>
+        <p class="lede">A few details about your home and we'll come back with a fair quote, usually the same day.</p>
         <ul class="estimate__points">
-          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Fast response, usually same day</li>
+          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Same-day response</li>
           <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>No pressure, no hidden fees</li>
-          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Serving Chicago, IL &amp; surrounding suburbs</li>
+          <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>Chicago &amp; surrounding suburbs</li>
         </ul>
+        <a href="tel:+17088552336" class="link-arrow estimate__call">Or call (708) 855-2336 <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
       </div>
 
       <form class="estimate-form" id="estimate-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
@@ -224,146 +273,18 @@
     </div>
   </section>
 
-  <!-- SERVICES (mission split) -->
-  <section class="mission" id="services">
-    <div class="mission__inner">
-      <div class="mission__copy" data-reveal>
-        <span class="eyebrow">03 — Services</span>
-        <h2 class="section-title">Every service,<br>done right.</h2>
-        <p class="lede">From windows to driveways, we bring the same careful, professional standard to every job — residential or commercial.</p>
-        <dl class="mission__list" data-reveal-stagger>
-          <div>
-            <span class="mission__num">01</span>
-            <div><dt>Window Cleaning</dt><dd>Streak-free, crystal-clear windows inside and out. We clean every pane by hand.</dd></div>
-          </div>
-          <div>
-            <span class="mission__num">02</span>
-            <div><dt>Gutter Cleaning</dt><dd>We clear out every leaf and flush every downspout. No mess left behind.</dd></div>
-          </div>
-          <div>
-            <span class="mission__num">03</span>
-            <div><dt>House Washing</dt><dd>Soft-wash cleaning that removes dirt and mildew without damaging your siding.</dd></div>
-          </div>
-          <div>
-            <span class="mission__num">04</span>
-            <div><dt>Power Washing</dt><dd>High-pressure cleaning for patios, decks, fences, and hard surfaces.</dd></div>
-          </div>
-          <div>
-            <span class="mission__num">05</span>
-            <div><dt>Driveway Cleaning</dt><dd>Oil stains, dirt, and grime removed. Your driveway will look like new again.</dd></div>
-          </div>
-          <div>
-            <span class="mission__num">06</span>
-            <div><dt>Commercial Services</dt><dd>Reliable exterior cleaning for storefronts, offices, and commercial properties.</dd></div>
-          </div>
-        </dl>
-      </div>
-
-      <figure class="mission__media" data-reveal>
-        <img src="images/gallery-gutters.jpg" alt="Don & John crew member power washing a home's siding">
-        <div class="mission__badge">
-          <b>Fully Insured</b>
-          <span>Chicago, IL &amp; Surrounding Suburbs</span>
-        </div>
-      </figure>
-    </div>
-  </section>
-
-  <!-- TESTIMONIAL SPOTLIGHT -->
-  <section class="quote" data-reveal>
-    <div class="quote__inner">
-      <div class="quote__bg"><img src="images/hero-bg.jpg" alt="" aria-hidden="true"></div>
-      <div class="quote__content">
-        <span class="quote__mark" aria-hidden="true">&ldquo;</span>
-        <p class="quote__text">Had them clean our gutters and wash the siding. House looks brand new. These guys work hard and really care about quality.</p>
-        <div class="quote__foot">
-          <div class="quote__stars" aria-label="5 out of 5 stars">
-            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-          </div>
-          <span class="quote__by"><b>Mike R.</b>Gutter cleaning &amp; house washing · Elmwood Park, IL</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECONDARY REVIEWS -->
-  <section class="reviews-more" id="reviews" data-reveal>
-    <div class="reviews-more__inner">
-      <span class="reviews-more__label">More from our customers</span>
-      <div class="reviews-more__grid" data-reveal-stagger>
-        <blockquote class="review-mini">
-          <div class="review-mini__stars" aria-label="5 out of 5 stars">
-            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-          </div>
-          <p>&ldquo;Don &amp; John cleaned every window in our house and they've never looked better. Showed up on time, friendly, and price matched the quote.&rdquo;</p>
-          <footer>Sarah M., Oak Park, IL</footer>
-        </blockquote>
-        <blockquote class="review-mini">
-          <div class="review-mini__stars" aria-label="5 out of 5 stars">
-            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
-          </div>
-          <p>&ldquo;We use Don &amp; John twice a year for window cleaning. Always consistent, always professional. Can't recommend enough.&rdquo;</p>
-          <footer>Lisa T., River Forest, IL</footer>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- CRAFT / WHY CHOOSE US -->
-  <section class="craft">
-    <div class="craft__inner">
-      <header class="craft__head" data-reveal>
-        <span class="eyebrow">04 — Why Choose Us</span>
-        <h2 class="section-title">The little things,<br>done right.</h2>
-        <p class="lede">Good service shows up in the details — showing up on time, pricing you can trust, and work that holds up after we leave.</p>
-      </header>
-      <div class="craft__grid" data-reveal-stagger>
-        <div class="craft__item">
-          <h3>Fully Insured</h3>
-          <p>Your property is covered every time we're on site.</p>
-        </div>
-        <div class="craft__item">
-          <h3>On Time, Every Time</h3>
-          <p>We show up when we say we will — no surprises.</p>
-        </div>
-        <div class="craft__item">
-          <h3>Fair, Upfront Pricing</h3>
-          <p>You'll know the price before we start. No hidden fees.</p>
-        </div>
-        <div class="craft__item">
-          <h3>100% Satisfaction</h3>
-          <p>Not happy with the work? We'll make it right.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FAQ -->
   <section class="faq" id="faq">
     <div class="faq__inner">
-      <div class="faq__head" data-reveal>
-        <span class="eyebrow">05 — FAQ</span>
-        <h2 class="section-title">Questions,<br>answered plainly.</h2>
-        <p class="lede">A few things people ask before booking. If yours isn't here, just call or email us.</p>
-        <a href="#contact" class="link-arrow faq__more">Ask a question <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
-      </div>
+      <header class="faq__head" data-reveal>
+        <span class="eyebrow">FAQ</span>
+        <h2 class="section-title">Common questions</h2>
+      </header>
 
       <div class="faq__list" id="faqList" data-reveal>
         <div class="faq__item">
           <button class="faq__q">Are you licensed and insured?<span class="faq__icon" aria-hidden="true"></span></button>
-          <div class="faq__a"><div class="faq__a-inner"><p>Yes — Don &amp; John is fully insured, so your property is protected while we work.</p></div></div>
+          <div class="faq__a"><div class="faq__a-inner"><p>Yes. Don &amp; John is fully insured, so your property is protected while we work.</p></div></div>
         </div>
         <div class="faq__item">
           <button class="faq__q">What areas do you serve?<span class="faq__icon" aria-hidden="true"></span></button>
@@ -371,48 +292,12 @@
         </div>
         <div class="faq__item">
           <button class="faq__q">How do I get a quote?<span class="faq__icon" aria-hidden="true"></span></button>
-          <div class="faq__a"><div class="faq__a-inner"><p>Fill out the free estimate form or give us a call — we usually get back to you the same day.</p></div></div>
+          <div class="faq__a"><div class="faq__a-inner"><p>Fill out the estimate form or call us. We usually get back to you the same day.</p></div></div>
         </div>
         <div class="faq__item">
           <button class="faq__q">What if I'm not happy with the work?<span class="faq__icon" aria-hidden="true"></span></button>
-          <div class="faq__a"><div class="faq__a-inner"><p>We back every job with a 100% satisfaction guarantee — if something's not right, we'll make it right.</p></div></div>
+          <div class="faq__a"><div class="faq__a-inner"><p>Every job is backed by a satisfaction guarantee. If something's not right, we come back and fix it.</p></div></div>
         </div>
-        <div class="faq__item">
-          <button class="faq__q">Do you clean commercial properties?<span class="faq__icon" aria-hidden="true"></span></button>
-          <div class="faq__a"><div class="faq__a-inner"><p>Yes — we clean storefronts, offices, and other commercial properties in addition to residential homes.</p></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT BAND -->
-  <section class="contact" id="contact" data-reveal>
-    <div class="contact__inner">
-      <div class="contact__bg"><img src="images/gallery-windows.jpg" alt="" aria-hidden="true"></div>
-      <div class="contact__top">
-        <span class="eyebrow eyebrow--dark">Start a project</span>
-        <h2 class="contact__title">Ready for a cleaner home?</h2>
-        <p class="contact__sub">No pressure, no hidden fees — tell us what you need and we'll take it from there.</p>
-      </div>
-      <div class="contact__cards" data-reveal-stagger>
-        <a class="contact-card" href="tel:+17088552336">
-          <span class="contact-card__ic" aria-hidden="true"><span class="material-symbols-outlined">call</span></span>
-          <span>Call</span>
-          <b>(708) 855-2336</b>
-          <span>Direct line to the crew</span>
-        </a>
-        <a class="contact-card" href="mailto:donandjohnglass@gmail.com">
-          <span class="contact-card__ic" aria-hidden="true"><span class="material-symbols-outlined">mail</span></span>
-          <span>Email</span>
-          <b>donandjohnglass@gmail.com</b>
-          <span>We reply the same day</span>
-        </a>
-        <a class="contact-card" href="#gallery">
-          <span class="contact-card__ic" aria-hidden="true"><span class="material-symbols-outlined">photo_library</span></span>
-          <span>See first</span>
-          <b>Our recent work</b>
-          <span>Real jobs, before you commit</span>
-        </a>
       </div>
     </div>
   </section>
@@ -425,17 +310,17 @@
     <div class="footer__top">
       <div>
         <span class="footer__brand">Don &amp; John<i>Exterior Cleaning</i></span>
-        <p class="footer__pitch">Chicago's Trusted Local Cleaners. We treat every home like it's our own.</p>
+        <p class="footer__pitch">Local, fully insured exterior cleaning for Chicago and the suburbs.</p>
         <a href="#estimate" class="btn btn--accent footer__cta">Get a Quote</a>
       </div>
       <div class="footer__cols">
         <div>
           <span class="footer__label">Explore</span>
           <p>
-            <a href="#gallery">Featured Work</a><br>
             <a href="#services">Services</a><br>
+            <a href="#gallery">Recent Work</a><br>
             <a href="#faq">FAQ</a><br>
-            <a href="#estimate">Get a Free Estimate</a>
+            <a href="#estimate">Free Estimate</a>
           </p>
         </div>
         <div>
@@ -443,7 +328,7 @@
           <p>
             <a href="tel:+17088552336">(708) 855-2336</a><br>
             <a href="mailto:donandjohnglass@gmail.com">donandjohnglass@gmail.com</a><br>
-            Fully Insured Cleaning Professionals
+            Chicago, IL &amp; Surrounding Suburbs
           </p>
         </div>
       </div>

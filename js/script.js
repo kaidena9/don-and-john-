@@ -36,24 +36,6 @@ document.documentElement.classList.add('js');
     });
   }
 
-  /* ---- work filters ---- */
-  var filters = document.getElementById('workFilters');
-  var grid = document.getElementById('workGrid');
-  if (filters && grid) {
-    var cards = Array.prototype.slice.call(grid.querySelectorAll('.work-card'));
-    filters.addEventListener('click', function (e) {
-      var btn = e.target.closest('.work__filter');
-      if (!btn) return;
-      filters.querySelectorAll('.work__filter').forEach(function (b) { b.classList.remove('is-active'); });
-      btn.classList.add('is-active');
-      var cat = btn.getAttribute('data-filter');
-      cards.forEach(function (card) {
-        var show = cat === 'all' || card.getAttribute('data-cat') === cat;
-        card.classList.toggle('is-hidden', !show);
-      });
-    });
-  }
-
   /* ---- FAQ accordion ---- */
   var faqList = document.getElementById('faqList');
   if (faqList) {
