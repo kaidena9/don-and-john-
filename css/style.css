@@ -486,16 +486,25 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 }
 .trust__by { display: block; margin-top: 14px; font-size: 13.5px; color: var(--on-dark-dim); }
 .trust__by b { color: #fff; font-weight: 700; margin-right: 6px; }
-.trust__source {
-  display: inline-flex; align-items: center; gap: 8px;
+.trust__sources {
+  display: flex; align-items: center; gap: 12px 22px; flex-wrap: wrap;
   margin-top: clamp(18px, 2.5vh, 24px);
+}
+.trust__source-note {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 600;
+  color: rgba(255,255,255,.82);
+}
+.trust__source-note .material-symbols-outlined { font-size: 17px; color: var(--accent-soft); }
+.trust__source {
+  display: inline-flex; align-items: center; gap: 6px;
   font-size: 13px; font-weight: 600;
   color: rgba(255,255,255,.82);
   padding-bottom: 2px;
   border-bottom: 1px solid rgba(255,255,255,.35);
   transition: color .25s var(--ease), border-color .25s var(--ease);
 }
-.trust__source .material-symbols-outlined { font-size: 17px; color: var(--accent-soft); }
+.trust__source .material-symbols-outlined { font-size: 15px; }
 .trust__source:hover { color: #fff; border-color: rgba(255,255,255,.7); }
 .trust__points {
   margin-top: clamp(28px, 4vh, 40px);
