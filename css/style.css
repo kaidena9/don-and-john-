@@ -240,17 +240,40 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   color: #fff;
 }
 .nav__call-ic {
+  position: relative;
   width: 40px; height: 40px;
   display: grid; place-items: center;
   border-radius: 50%;
-  background: #fff;
-  color: var(--accent-dark);
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.45);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 6px 18px -6px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.35);
+  transition: background .3s var(--ease), transform .35s var(--ease-out), box-shadow .35s var(--ease-out);
+}
+.nav__call-ic::after {
+  content: "";
+  position: absolute; inset: -1px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.5);
+  animation: call-pulse 2.6s var(--ease) infinite;
+  pointer-events: none;
+}
+@keyframes call-pulse {
+  0%   { transform: scale(1); opacity: .7; }
+  70%  { transform: scale(1.45); opacity: 0; }
+  100% { transform: scale(1.45); opacity: 0; }
 }
 .nav__call-ic .material-symbols-outlined { font-size: 19px; }
 .nav__call-txt { display: flex; flex-direction: column; line-height: 1.25; }
 .nav__call-txt i { font-style: normal; font-size: 11px; color: rgba(255,255,255,.72); }
 .nav__call-txt b { font-size: 14px; font-weight: 700; white-space: nowrap; }
-.nav__call:hover .nav__call-ic { background: var(--paper-3); }
+.nav__call:hover .nav__call-ic {
+  background: rgba(255,255,255,.3);
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 12px 26px -8px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.45);
+}
 .nav__cta {
   display: inline-flex;
   align-items: center;
