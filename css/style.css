@@ -417,6 +417,20 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   border: 1px solid rgba(255,255,255,.22);
 }
 .services__note { margin-top: 18px; font-size: 13px; color: rgba(255,255,255,.65); }
+.services__seasonal {
+  margin-top: 18px;
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16);
+}
+.services__seasonal .material-symbols-outlined { font-size: 24px; color: #fff; flex: none; }
+.services__seasonal b { display: block; font-size: 14.5px; font-weight: 700; }
+.services__seasonal span:not(.material-symbols-outlined) { font-size: 13.5px; color: rgba(255,255,255,.75); }
 
 /* ============================================================
    WORK
@@ -428,6 +442,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   gap: 24px; flex-wrap: wrap;
   margin-bottom: clamp(24px, 4vh, 36px);
 }
+.work__note { margin: -10px 0 20px; font-size: 13.5px; color: var(--text-faint); }
 .work__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 1.6vw, 20px); }
 .work-card {
   position: relative; border-radius: 14px; overflow: hidden;
@@ -574,7 +589,8 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .price-list__row span { font-weight: 600; color: var(--text); }
 .price-list__row span i { font-style: normal; font-weight: 500; font-size: 12px; color: var(--text-faint); margin-left: 6px; }
 .price-list__row b { font-weight: 700; color: var(--accent-dark); font-variant-numeric: tabular-nums; white-space: nowrap; }
-.price-list__note { padding-top: 11px; font-size: 12.5px; color: var(--text-faint); }
+.price-list__note { padding-top: 11px; }
+.price-list__note p { font-size: 12.5px; line-height: 1.5; color: var(--text-faint); padding: 2px 0; }
 .estimate__points { margin-top: 22px; display: grid; gap: 11px; }
 .estimate__points { margin-top: 22px; display: grid; gap: 11px; }
 .estimate__points li { display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: var(--text-dim); }
