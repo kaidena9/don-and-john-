@@ -677,7 +677,7 @@ fieldset.estimate-form__row legend { margin-bottom: 8px; }
    FOOTER
    ============================================================ */
 .site-footer {
-  background: linear-gradient(180deg, rgba(20, 58, 173, 0.96) 0%, rgba(13, 25, 66, 0.97) 55%, rgba(10, 14, 32, 0.99) 100%);
+  background: var(--accent-dark);
   color: var(--on-dark);
   padding: clamp(48px, 7vh, 76px) var(--gutter) 26px;
 }
