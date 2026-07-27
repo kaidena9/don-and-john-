@@ -249,8 +249,8 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: var(--accent-dark);
-  color: #fff;
+  background: var(--paper-2);
+  color: var(--text);
 }
 .hero__bg {
   position: absolute; inset: 0;
@@ -262,10 +262,9 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   content: "";
   position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(92deg,
-    rgba(16, 42, 128, 0.94) 0%,
-    rgba(16, 42, 128, 0.78) 36%,
-    rgba(20, 58, 173, 0.42) 62%,
-    rgba(20, 58, 173, 0.08) 88%);
+    rgba(246, 248, 250, 0.88) 0%,
+    rgba(246, 248, 250, 0.55) 38%,
+    rgba(246, 248, 250, 0) 66%);
 }
 .hero__inner {
   position: relative; z-index: 2;
@@ -277,7 +276,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .hero__eyebrow {
   display: inline-flex; align-items: center; gap: 9px;
   font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-  color: #fff;
+  color: var(--accent-dark);
   margin-bottom: 20px;
 }
 .hero__eyebrow .material-symbols-outlined { font-size: 19px; }
@@ -288,10 +287,10 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   line-height: 1.12;
   letter-spacing: 0.005em;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--ink);
   max-width: 15ch;
 }
-.hero__body { margin-top: 20px; max-width: 52ch; font-size: clamp(15px, 1.15vw, 16.5px); line-height: 1.62; color: rgba(255,255,255,.88); }
+.hero__body { margin-top: 20px; max-width: 52ch; font-size: clamp(15px, 1.15vw, 16.5px); line-height: 1.62; color: var(--text-dim); }
 .hero__ctas { margin-top: 30px; display: flex; align-items: center; gap: 14px 22px; flex-wrap: wrap; }
 .btn--white { background: #fff; color: var(--accent-dark); }
 .btn--white:hover { background: var(--paper-2); }
@@ -589,9 +588,9 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   .hero { min-height: 0; }
   .hero__inner { padding-top: clamp(104px, 14vh, 130px); }
   .hero__copy { max-width: none; }
-  .hero__bg { object-position: 72% center; }
+  .hero__bg { object-position: 24% center; }
   .hero::after {
-    background: linear-gradient(180deg, rgba(16,42,128,.92) 0%, rgba(16,42,128,.72) 55%, rgba(20,58,173,.5) 100%);
+    background: linear-gradient(180deg, rgba(246,248,250,.9) 0%, rgba(246,248,250,.62) 55%, rgba(246,248,250,.25) 100%);
   }
   .mission__inner { grid-template-columns: 1fr; }
   .mission__media { order: -1; max-height: 420px; }
