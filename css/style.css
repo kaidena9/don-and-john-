@@ -703,6 +703,14 @@ fieldset.estimate-form__row legend { margin-bottom: 8px; }
   transform: translateY(-2px);
   box-shadow: 0 10px 22px -8px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.22);
 }
+.footer__nd {
+  font-family: var(--ff-body);
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1;
+  color: #B8EC51;
+  transform: translateY(-1px);
+}
 .footer__cta { margin-top: 22px; }
 .footer__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 24px; }
 .footer__label { display: block; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--on-dark-faint); margin-bottom: 12px; }
