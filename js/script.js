@@ -96,16 +96,31 @@ document.documentElement.classList.add('js');
     }, { passive: true });
   }
 
-  /* ---- estimate form ---- */
+  /* ---- estimate form ----
+     Paste the Apps Script web-app URL here (see FORM-SETUP.md) to send mail
+     from our own account — no activation step. Empty = fall back to the
+     form's own action. */
+  var FORM_ENDPOINT = '';
+
   var form = document.getElementById('estimate-form');
   var formNote = document.getElementById('form-note');
   if (form) {
-    form.addEventListener('submit', function () {
+    form.addEventListener('submit', function (e) {
       // Reply-to the customer, so Don & John can answer straight from the email.
       var email = form.querySelector('#email');
       var replyto = form.querySelector('input[name="_replyto"]');
       if (email && replyto) replyto.value = email.value;
       if (formNote) formNote.textContent = 'Sending your request…';
+
+      if (!FORM_ENDPOINT) return;
+      e.preventDefault();
+      fetch(FORM_ENDPOINT, { method: 'POST', mode: 'no-cors', body: new FormData(form) })
+        .then(function () { window.location.href = 'thanks.html'; })
+        .catch(function () {
+          if (formNote) {
+            formNote.textContent = "Couldn't send just now — please call (708) 855-2336.";
+          }
+        });
     });
   }
 })();
