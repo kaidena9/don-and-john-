@@ -65,17 +65,38 @@ document.documentElement.classList.add('js');
     revealEls.forEach(function (el) { el.classList.add('is-in'); });
   }
 
+  /* ---- review slider ---- */
+  var track = document.getElementById('revTrack');
+  var prevBtn = document.getElementById('revPrev');
+  var nextBtn = document.getElementById('revNext');
+  var countEl = document.getElementById('revCount');
+  if (track && prevBtn && nextBtn) {
+    var slides = track.querySelectorAll('.trust__slide').length;
+    var idx = 0;
+    var go = function (i) {
+      idx = (i + slides) % slides;
+      track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+      if (countEl) countEl.textContent = (idx + 1) + ' / ' + slides;
+    };
+    prevBtn.addEventListener('click', function () { go(idx - 1); });
+    nextBtn.addEventListener('click', function () { go(idx + 1); });
+
+    var startX = null;
+    track.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', function (e) {
+      if (startX === null) return;
+      var dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 40) go(dx < 0 ? idx + 1 : idx - 1);
+      startX = null;
+    }, { passive: true });
+  }
+
   /* ---- estimate form ---- */
   var form = document.getElementById('estimate-form');
   var formNote = document.getElementById('form-note');
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      if (form.action.indexOf('YOUR_FORM_ID') !== -1) {
-        e.preventDefault();
-        if (formNote) {
-          formNote.textContent = "Form isn't connected yet — call (708) 855-2336 or email donandjohnglass@gmail.com in the meantime.";
-        }
-      }
+  if (form && formNote) {
+    form.addEventListener('submit', function () {
+      formNote.textContent = 'Sending your request…';
     });
   }
 })();
