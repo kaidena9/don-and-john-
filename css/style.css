@@ -554,6 +554,28 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .estimate__inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: clamp(32px, 5vw, 64px); }
 @media (min-width: 900px) { .estimate__inner { grid-template-columns: 1fr 1.1fr; align-items: start; } }
 .estimate__copy .section-title { margin-bottom: 16px; }
+.price-list {
+  margin-top: 24px;
+  background: rgba(255,255,255,.6);
+  border: 1px solid rgba(255,255,255,.9);
+  border-radius: 16px;
+  padding: 8px 20px 14px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 20px 44px -28px rgba(20,58,173,.3), inset 0 1px 0 #fff;
+  max-width: 460px;
+}
+.price-list__row {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 14.5px;
+}
+.price-list__row span { font-weight: 600; color: var(--text); }
+.price-list__row span i { font-style: normal; font-weight: 500; font-size: 12px; color: var(--text-faint); margin-left: 6px; }
+.price-list__row b { font-weight: 700; color: var(--accent-dark); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.price-list__note { padding-top: 11px; font-size: 12.5px; color: var(--text-faint); }
+.estimate__points { margin-top: 22px; display: grid; gap: 11px; }
 .estimate__points { margin-top: 22px; display: grid; gap: 11px; }
 .estimate__points li { display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: var(--text-dim); }
 .estimate__points .material-symbols-outlined { color: var(--accent); font-size: 20px; }
@@ -569,7 +591,36 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 }
 .estimate-form__row { display: flex; flex-direction: column; gap: 6px; }
 .estimate-form__row--full { grid-column: 1 / -1; }
-.estimate-form__row label { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text); }
+.estimate-form__row label, .estimate-form__row legend { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text); }
+fieldset.estimate-form__row { border: none; margin: 0; padding: 0; }
+fieldset.estimate-form__row legend { margin-bottom: 8px; }
+.svc-picks { display: flex; flex-wrap: wrap; gap: 8px; }
+.svc-pick { position: relative; }
+.svc-pick input {
+  position: absolute; inset: 0;
+  opacity: 0; margin: 0;
+  cursor: pointer;
+}
+.svc-pick span {
+  display: inline-flex; align-items: center;
+  padding: 9px 16px;
+  border-radius: 100px;
+  border: 1.5px solid var(--line);
+  background: var(--paper);
+  font-size: 13.5px; font-weight: 600;
+  color: var(--text-dim);
+  transition: background .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease), transform .2s var(--ease-out);
+  pointer-events: none;
+}
+.svc-pick:hover span { border-color: var(--accent-soft); color: var(--text); }
+.svc-pick input:checked + span {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px -8px rgba(30,79,216,.55);
+}
+.svc-pick input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
 .estimate-form__row input, .estimate-form__row select, .estimate-form__row textarea {
   font-family: var(--ff-body); font-size: 16px; padding: 13px 14px;
   border: 1.5px solid var(--line); border-radius: 10px; background: var(--paper); color: var(--text);
