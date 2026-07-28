@@ -104,22 +104,66 @@ document.documentElement.classList.add('js');
 
   var form = document.getElementById('estimate-form');
   var formNote = document.getElementById('form-note');
+  var overlay = document.getElementById('sentOverlay');
+  var overlayClose = document.getElementById('sentClose');
+
+  var showSent = function () {
+    if (!overlay) { window.location.href = 'thanks.html'; return; }
+    overlay.hidden = false;
+    document.body.style.overflow = 'hidden';
+    if (overlayClose) overlayClose.focus();
+  };
+  var hideSent = function () {
+    if (!overlay) return;
+    overlay.hidden = true;
+    document.body.style.overflow = '';
+  };
+  if (overlayClose) overlayClose.addEventListener('click', hideSent);
+  if (overlay) {
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) hideSent(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !overlay.hidden) hideSent();
+    });
+  }
+
   if (form) {
+    var addr = form.querySelector('#address');
+    if (addr) {
+      // A quote needs a real address — insist on a ZIP.
+      var checkZip = function () {
+        var ok = /\b\d{5}(-\d{4})?\b/.test(addr.value);
+        addr.setCustomValidity(ok ? '' : 'Please include the ZIP code, e.g. 60634');
+      };
+      addr.addEventListener('input', checkZip);
+      addr.addEventListener('blur', checkZip);
+    }
+
     form.addEventListener('submit', function (e) {
       // Reply-to the customer, so Don & John can answer straight from the email.
       var email = form.querySelector('#email');
       var replyto = form.querySelector('input[name="_replyto"]');
       if (email && replyto) replyto.value = email.value;
-      if (formNote) formNote.textContent = 'Sending your request…';
 
       if (!FORM_ENDPOINT) return;
       e.preventDefault();
+
+      var btn = form.querySelector('.estimate-form__submit');
+      if (btn) { btn.disabled = true; btn.style.opacity = '.7'; }
+      if (formNote) formNote.textContent = 'Sending your request…';
+
       fetch(FORM_ENDPOINT, { method: 'POST', mode: 'no-cors', body: new FormData(form) })
-        .then(function () { window.location.href = 'thanks.html'; })
+        .then(function () {
+          if (formNote) formNote.textContent = '';
+          form.reset();
+          showSent();
+        })
         .catch(function () {
           if (formNote) {
             formNote.textContent = "Couldn't send just now — please call (708) 855-2336.";
           }
+        })
+        .then(function () {
+          if (btn) { btn.disabled = false; btn.style.opacity = ''; }
         });
     });
   }
