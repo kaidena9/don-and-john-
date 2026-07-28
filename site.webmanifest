@@ -1,0 +1,13 @@
+{
+  "name": "Don & John High Class Glass",
+  "short_name": "Don & John",
+  "description": "Window, gutter, house washing and power washing in Chicago and the surrounding suburbs.",
+  "icons": [
+    { "src": "images/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "images/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#143AAD",
+  "background_color": "#143AAD",
+  "display": "browser",
+  "start_url": "./"
+}

@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /thanks.html
 
 Sitemap: https://kaidena9.github.io/don-and-john-/sitemap.xml
