@@ -100,7 +100,7 @@ document.documentElement.classList.add('js');
      Paste the Apps Script web-app URL here (see FORM-SETUP.md) to send mail
      from our own account — no activation step. Empty = fall back to the
      form's own action. */
-  var FORM_ENDPOINT = '';
+  var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwuA43ED9MX_57EEmlU3lyKi_288O8c9HLTYYHARS7bGqrp6xNhTV9ewicKGErsWn2-Hw/exec';
 
   var form = document.getElementById('estimate-form');
   var formNote = document.getElementById('form-note');

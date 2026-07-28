@@ -1,40 +1,37 @@
-# Estimate form — email delivery setup
+# Estimate form — how leads reach Don & John
 
-Goal: customer fills the form → the details land in Don & John's inbox.
-No activation email, no approval step, no dashboard.
+Live and working. No activation step, no dashboard login, no approval.
 
-The site is static, so the email has to be sent by *some* authenticated
-account. We use a Google Apps Script web app on an account we control
-(Kaiden's), which sends straight to `donandjohnglass@gmail.com`. Don & John
-never have to confirm anything.
+## What happens on submit
 
-## One-time setup (~3 minutes, in a browser)
+1. The browser posts the form to a Google Apps Script web app running under
+   kaidena9@gmail.com.
+2. The script emails a formatted table to **donandjohnglass@gmail.com**
+   (reply-to is set to the customer, so hitting Reply answers them).
+3. The same lead is appended to the **leads spreadsheet**:
+   https://docs.google.com/spreadsheets/d/1rhCALNP4v4TmttK0zdb6K7mMfWFcx1OjToNl-m5Svoo/edit
+   Shared as "anyone with the link can view" — send Don & John the link and
+   they can browse every lead, no account needed.
+4. The visitor lands on `thanks.html`.
 
-1. Go to **https://script.google.com** → **New project**.
-2. Delete the placeholder code, paste in the contents of `form-endpoint.gs`
-   from this repo, and save.
-3. **Deploy → New deployment** → gear icon → **Web app**:
-   - *Execute as*: **Me**
-   - *Who has access*: **Anyone**
-   - Deploy → authorize the script when Google prompts (it needs permission
-     to send mail as you).
-4. Copy the **Web app URL** (it looks like
-   `https://script.google.com/macros/s/AKfy…/exec`) and send it to me.
-   I paste it into `js/script.js` as `FORM_ENDPOINT` and push — done.
+## Spam controls
 
-## What happens after that
+- **One submission per person per 24h**, keyed on email/phone, enforced
+  server-side in the script.
+- **Honeypot field** (`_honey`) — bots that fill every field are dropped
+  silently, no email, no row.
 
-- Submit → the browser POSTs the fields to the script → the script emails
-  the table to `donandjohnglass@gmail.com` and the visitor lands on
-  `thanks.html`.
-- **Reply** on that email replies to the customer, not to us.
-- The hidden `_honey` field drops bots silently.
-- To change the destination later, edit `SEND_TO` at the top of the script
-  and redeploy. To send to two inboxes, use `to: 'a@x.com,b@y.com'`.
+## Where things live
 
-## Fallback currently in place
+- Script project: https://script.google.com/d/1EOuPpdYEEWRZYvJO15HDjiDqlgEf4jjQCpVV2kiw01ZNOrVcs6obyhtw/edit
+- Source of truth for the script: `form-endpoint.gs` in this repo
+- Endpoint URL: `FORM_ENDPOINT` at the top of the form block in `js/script.js`
 
-Until `FORM_ENDPOINT` is filled in, the form still posts to FormSubmit
-(`formsubmit.co/donandjohnglass@gmail.com`), which works only after the
-one-time activation link in that inbox is clicked. Filling in the Apps
-Script URL removes that dependency entirely.
+## Changing things
+
+- **Different destination inbox**: edit `SEND_TO` at the top of the script,
+  then redeploy (Deploy > Manage deployments > edit > New version).
+  Two inboxes: `SEND_TO = 'a@x.com,b@y.com'`.
+- **Redeploying from the CLI**: `clasp push && clasp deploy`. A *new*
+  deployment gets a new URL — update `FORM_ENDPOINT` if so. Editing the
+  existing deployment keeps the URL.
