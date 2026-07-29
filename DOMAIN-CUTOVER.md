@@ -1,12 +1,18 @@
-# Domain cutover checklist
+# Domain cutover — COMPLETED 2026-07-29
+
+The site is live at **https://donandjohn.com**, hosted on Vercel and deployed
+from `frankiecampbellchicago-debug/don-and-john-` on push to `main`.
 
 Every absolute URL on the site uses one base:
-`https://kaidena9.github.io/don-and-john-`
+`https://donandjohn.com`
 
-## Moving to the real domain (e.g. https://donandjohnglass.com)
+DNS at GoDaddy: apex `A` → Vercel, `www` `CNAME` → the project's
+`*.vercel-dns-017.com` target. Nameservers stay on `domaincontrol.com`.
+
+## If the domain ever changes again
 
 1. **Find-and-replace across the repo:**
-   `https://kaidena9.github.io/don-and-john-` → `https://donandjohnglass.com`
+   `https://donandjohn.com` → the new base
    Files: `index.html`, `services.html`, `reviews.html`, `thanks.html`,
    `robots.txt`, `sitemap.xml`, `js/script.js` (the form's `_next` fallback).
    That covers canonicals, Open Graph/Twitter URLs, all JSON-LD `@id`/`url`
