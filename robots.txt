@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /thanks.html
 
-Sitemap: https://donandjohn.com/sitemap.xml
+Sitemap: https://www.donandjohn.com/sitemap.xml
